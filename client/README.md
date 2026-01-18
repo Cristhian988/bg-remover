@@ -1,203 +1,228 @@
-# BG-Remove Frontend Client
+# Cliente Frontend BG-Remove
 
-A modern, responsive React application for intelligent background removal with a professional user interface built with the latest web technologies.
+Aplicación React moderna y receptiva para la eliminación inteligente de fondos con interfaz de usuario profesional construida con tecnologías web de última generación.
 
-## 📋 Project Description
+## 📋 Descripción del Proyecto
 
-BG-Remove Frontend is a sophisticated web application that provides users with an intuitive interface to remove backgrounds from images. The application features:
+BG-Remove Frontend es una aplicación web sofisticada que proporciona a los usuarios una interfaz intuitiva para eliminar fondos de imágenes. La aplicación incluye:
 
-- **Responsive Design**: Works seamlessly across desktop, tablet, and mobile devices
-- **User-Friendly Interface**: Intuitive UI for easy background removal
-- **Real-time Preview**: Instant visual feedback with before/after comparisons
-- **Professional Components**: Modular, reusable React components
-- **Modern Styling**: Clean, modern design using Tailwind CSS
-- **Type Safety**: Full TypeScript support for robust code
+- **Diseño Receptivo**: Funciona sin problemas en dispositivos de escritorio, tableta y móviles
+- **Interfaz Amigable**: Interfaz intuitiva para eliminar fondos fácilmente
+- **Vista Previa en Tiempo Real**: Retroalimentación visual instantánea con comparativas antes/después
+- **Componentes Profesionales**: Componentes React modulares y reutilizables
+- **Estilos Modernos**: Diseño limpio y moderno usando Tailwind CSS
+- **Seguridad de Tipos**: Soporte completo de TypeScript para código robusto
 
-## 🛠️ Tech Stack
+## 🛠️ Stack Tecnológico
 
-| Category | Technology | Version |
-|----------|-----------|---------|
-| **Frontend Framework** | React | 19.2.0 |
-| **Build Tool** | Vite | 7.2.4 |
-| **Language** | TypeScript | ~5.9.3 |
-| **Styling** | Tailwind CSS | 4.1.18 |
-| **Routing** | React Router | 7.12.0 |
-| **Icon Library** | Remix Icon | 4.8.0 |
-| **Notifications** | React Toastify | 11.0.5 |
-| **Code Quality** | ESLint | 9.39.1 |
+| Categoría              | Tecnología     | Versión |
+| ---------------------- | -------------- | ------- |
+| **Framework Frontend** | React          | 19.2.0  |
+| **Herramienta Build**  | Vite           | 7.2.4   |
+| **Lenguaje**           | TypeScript     | ~5.9.3  |
+| **Estilos**            | Tailwind CSS   | 4.1.18  |
+| **Enrutamiento**       | React Router   | 7.12.0  |
+| **Librería Iconos**    | Remix Icon     | 4.8.0   |
+| **Notificaciones**     | React Toastify | 11.0.5  |
+| **Calidad Código**     | ESLint         | 9.39.1  |
 
-## 📦 Installation
+## 📦 Instalación
 
-### Prerequisites
+### Requisitos Previos
 
-- **Node.js**: Version 16 or higher
-- **npm** or **yarn**: Package manager
-- **Git**: For version control
+- **Node.js**: Versión 16 o superior
+- **npm** o **yarn**: Gestor de paquetes
+- **Git**: Para control de versiones
 
-### Setup Steps
+### Pasos de Configuración
 
-1. **Clone the repository**:
+1. **Clonar el repositorio**:
+
    ```bash
-   git clone https://github.com/yourusername/bg-remove.git
+   git clone https://github.com/tuusuario/bg-remove.git
    cd bg-remove
    ```
 
-2. **Navigate to the client folder**:
+2. **Navegar a la carpeta cliente**:
+
    ```bash
    cd client
    ```
 
-3. **Install dependencies**:
+3. **Instalar dependencias**:
+
    ```bash
    npm install
    ```
-   Or with yarn:
+
+   O con yarn:
+
    ```bash
    yarn install
    ```
 
-4. **Create environment configuration** (optional):
+4. **Crear configuración de ambiente** (opcional):
+
    ```bash
    cp .env.example .env.local
    ```
 
-5. **Start the development server**:
+5. **Iniciar el servidor de desarrollo**:
    ```bash
    npm run dev
    ```
 
-## 🚀 Development Commands
+## 🚀 Comandos de Desarrollo
 
-### Development Server
+### Servidor de Desarrollo
+
 ```bash
 npm run dev
 ```
-Starts the Vite development server with Hot Module Replacement (HMR).
-- **Access**: `http://localhost:5173`
-- **Auto-reload**: Changes reflect instantly in the browser
 
-### Production Build
+Inicia el servidor de desarrollo Vite con Hot Module Replacement (HMR).
+
+- **Acceso**: `http://localhost:5173`
+- **Recarga automática**: Los cambios se reflejan instantáneamente en el navegador
+
+### Compilación de Producción
+
 ```bash
 npm run build
 ```
-Compiles TypeScript and bundles the application for production.
-- **Output**: `dist/` folder
-- **Optimized**: Minified and tree-shaken for best performance
 
-### Preview Production Build
+Compila TypeScript y empaqueta la aplicación para producción.
+
+- **Salida**: Carpeta `dist/`
+- **Optimizado**: Minificado y tree-shaken para mejor rendimiento
+
+### Vista Previa de Compilación de Producción
+
 ```bash
 npm run preview
 ```
-Serves the production build locally for testing before deployment.
-- **Access**: Usually `http://localhost:4173`
 
-### Lint and Format
+Sirve la compilación de producción localmente para pruebas antes del despliegue.
+
+- **Acceso**: Generalmente `http://localhost:4173`
+
+### Linting y Formateo
+
 ```bash
 npm run lint
 ```
-Runs ESLint to identify and fix code quality issues.
-- **Auto-fix**: Automatically fixes many issues
-- **Validation**: Ensures code follows project standards
 
-## 📁 Folder Structure
+Ejecuta ESLint para identificar y corregir problemas de calidad del código.
+
+- **Auto-corrección**: Corrige automáticamente muchos problemas
+- **Validación**: Asegura que el código siga los estándares del proyecto
+
+## 📁 Estructura de Carpetas
 
 ```
 client/
-├── public/                          # Static assets (favicon, etc.)
+├── public/                          # Activos estáticos (favicon, etc.)
 │
 ├── src/
-│   ├── components/                 # Reusable React components
-│   │   ├── BgSlider.tsx           # Interactive background slider
-│   │   ├── Footer.tsx             # Application footer
-│   │   ├── Header.tsx             # Page header
-│   │   ├── Navbar.tsx             # Navigation bar
-│   │   ├── Steps.tsx              # Steps/process display
-│   │   ├── Testimonials.tsx       # User testimonials section
-│   │   ├── Title.tsx              # Page title component
-│   │   └── Upload.tsx             # Image upload component
+│   ├── components/                 # Componentes React reutilizables
+│   │   ├── BgSlider.tsx           # Deslizador interactivo de fondos
+│   │   ├── Footer.tsx             # Pie de página
+│   │   ├── Header.tsx             # Encabezado de página
+│   │   ├── Navbar.tsx             # Barra de navegación
+│   │   ├── Steps.tsx              # Visualización de pasos/proceso
+│   │   ├── Testimonials.tsx       # Sección de testimonios
+│   │   ├── Title.tsx              # Componente de título de página
+│   │   └── Upload.tsx             # Componente de carga de imágenes
 │   │
 │   ├── context/                   # React Context API
-│   │   └── [context files]        # Global state management
+│   │   └── [archivos context]     # Gestión de estado global
 │   │
-│   ├── pages/                     # Page-level components
-│   │   ├── Home.tsx               # Landing/home page
-│   │   ├── Result.tsx             # Results display page
-│   │   └── BuyCreadit.tsx         # Credit purchase page
+│   ├── pages/                     # Componentes de nivel de página
+│   │   ├── Home.tsx               # Página de inicio/bienvenida
+│   │   ├── Result.tsx             # Página de visualización de resultados
+│   │   └── BuyCreadit.tsx         # Página de compra de créditos
 │   │
-│   ├── assets/                    # Images and static resources
-│   │   └── assets.tsx             # Asset definitions
+│   ├── assets/                    # Imágenes y recursos estáticos
+│   │   └── assets.tsx             # Definiciones de activos
 │   │
-│   ├── App.tsx                    # Root application component
-│   ├── main.tsx                   # Application entry point
-│   ├── index.css                  # Global styles
-│   └── vite-env.d.ts              # Vite environment types
+│   ├── App.tsx                    # Componente raíz de la aplicación
+│   ├── main.tsx                   # Punto de entrada de la aplicación
+│   ├── index.css                  # Estilos globales
+│   └── vite-env.d.ts              # Tipos de ambiente de Vite
 │
-├── package.json                    # Dependencies and scripts
-├── tsconfig.json                   # TypeScript configuration
-├── tsconfig.app.json              # App-specific TS config
-├── tsconfig.node.json             # Node-specific TS config
-├── vite.config.ts                 # Vite build configuration
-├── eslint.config.js               # ESLint rules
-├── index.html                     # HTML entry point
-├── README.md                       # This file
-└── .gitignore                      # Git ignore patterns
+├── package.json                    # Dependencias y scripts
+├── tsconfig.json                   # Configuración de TypeScript
+├── tsconfig.app.json              # Configuración TS específica de la app
+├── tsconfig.node.json             # Configuración TS específica de Node
+├── vite.config.ts                 # Configuración de build de Vite
+├── eslint.config.js               # Reglas de ESLint
+├── index.html                     # Punto de entrada HTML
+├── README.md                       # Este archivo
+└── .gitignore                      # Patrones de ignore de Git
 ```
 
-### Component Architecture
+### Arquitectura de Componentes
 
-- **BgSlider**: Slider component for background comparison effects
-- **Upload**: Handles image file uploads and validation
-- **Navbar**: Navigation menu with routing
-- **Header & Footer**: Layout components
-- **Steps & Testimonials**: Content display components
-- **Home**: Main landing page
-- **Result**: Displays processed image results
-- **BuyCreadit**: User credit/subscription management
+- **BgSlider**: Componente deslizador para efectos de comparación de fondos
+- **Upload**: Maneja cargas de archivos de imagen y validación
+- **Navbar**: Menú de navegación con enrutamiento
+- **Header & Footer**: Componentes de diseño
+- **Steps & Testimonials**: Componentes de visualización de contenido
+- **Home**: Página de inicio principal
+- **Result**: Muestra resultados de imágenes procesadas
+- **BuyCreadit**: Gestión de créditos/suscripciones de usuarios
 
-## 🔧 Configuration
+## 🔧 Configuración
 
-### Vite Configuration (`vite.config.ts`)
-- React plugin integration
-- Build optimization settings
-- Development server configuration
+### Configuración de Vite (`vite.config.ts`)
 
-### TypeScript Configuration (`tsconfig.json`)
-- Strict type checking enabled
-- ES2020 target
-- JSX support for React
+- Integración del plugin React
+- Configuración de optimización de build
+- Configuración del servidor de desarrollo
 
-### ESLint Configuration (`eslint.config.js`)
-- React and React Hooks rules
-- TypeScript support
-- Code style enforcement
+### Configuración de TypeScript (`tsconfig.json`)
 
-## 🌍 Environment Variables
+- Verificación de tipos estricta habilitada
+- Target ES2020
+- Soporte JSX para React
 
-Create a `.env.local` file in the client directory:
+### Configuración de ESLint (`eslint.config.js`)
+
+- Reglas de React y React Hooks
+- Soporte de TypeScript
+- Aplicación de estilo de código
+
+## 🌍 Variables de Ambiente
+
+Crea un archivo `.env.local` en el directorio del cliente:
 
 ```env
 VITE_API_URL=https://api.example.com
 VITE_APP_NAME=BG-Remove
 ```
 
-Access in code:
+Acceso en el código:
+
 ```typescript
 const apiUrl = import.meta.env.VITE_API_URL;
 ```
 
-## 🚀 Deployment
+## 🚀 Despliegue
 
-### Vercel (Recommended)
-1. Push code to GitHub
-2. Connect repository to Vercel
-3. Auto-deployment on push to main
+### Vercel (Recomendado)
+
+1. Envía código a GitHub
+2. Conecta el repositorio a Vercel
+3. Despliegue automático al hacer push a main
 
 ### Netlify
-1. Connect GitHub repository
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
+
+1. Conecta el repositorio de GitHub
+2. Configura comando de build: `npm run build`
+3. Configura directorio de publicación: `dist`
 
 ### Docker
+
 ```dockerfile
 FROM node:18-alpine AS build
 WORKDIR /app
@@ -212,78 +237,83 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-### Traditional Server
+### Servidor Tradicional
+
 ```bash
 npm run build
-# Upload dist/ folder to web server
+# Sube la carpeta dist/ al servidor web
 ```
 
-## 📝 Development Workflow
+## 📝 Flujo de Trabajo de Desarrollo
 
-1. **Create a feature branch**:
+1. **Crea una rama de característica**:
+
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout -b feature/nombre-de-tu-caracteristica
    ```
 
-2. **Make your changes** and test locally
+2. **Realiza tus cambios** y prueba localmente
 
-3. **Commit with conventional commits**:
+3. **Haz commit con commits convencionales**:
+
    ```bash
-   git commit -m "feat: add new feature description"
+   git commit -m "feat: agregar descripción de nueva característica"
    ```
 
-4. **Push your branch**:
+4. **Envía tu rama**:
+
    ```bash
-   git push origin feature/your-feature-name
+   git push origin feature/nombre-de-tu-caracteristica
    ```
 
-5. **Create a Pull Request** on GitHub
+5. **Crea una Pull Request** en GitHub
 
-## ✅ Code Quality Standards
+## ✅ Estándares de Calidad del Código
 
-- **TypeScript**: Strict mode enabled for type safety
-- **ESLint**: Enforce code quality rules
-- **Component Structure**: Functional components with hooks
-- **Naming Conventions**: camelCase for variables/functions, PascalCase for components
-- **Props**: Properly typed using TypeScript interfaces
+- **TypeScript**: Modo estricto habilitado para seguridad de tipos
+- **ESLint**: Aplicación de reglas de calidad de código
+- **Estructura de Componentes**: Componentes funcionales con hooks
+- **Convenciones de Nombres**: camelCase para variables/funciones, PascalCase para componentes
+- **Props**: Correctamente tipados usando interfaces de TypeScript
 
-## 🔄 Git Workflow
+## 🔄 Flujo de Git
 
-- **main**: Production-ready code
-- **develop**: Integration branch for features
-- **feature/***: Feature branches for new functionality
-- **bugfix/***: Bug fix branches
-- **docs/***: Documentation updates
+- **main**: Código listo para producción
+- **develop**: Rama de integración para características
+- **feature/\***: Ramas de características para nueva funcionalidad
+- **bugfix/\***: Ramas de corrección de errores
+- **docs/\***: Actualizaciones de documentación
 
-## 📚 Resources
+## 📚 Recursos
 
-- [React Documentation](https://react.dev)
-- [Vite Documentation](https://vitejs.dev)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [React Router Docs](https://reactrouter.com)
+- [Documentación de React](https://react.dev)
+- [Documentación de Vite](https://vitejs.dev)
+- [Manual de TypeScript](https://www.typescriptlang.org/docs/)
+- [Documentación de Tailwind CSS](https://tailwindcss.com/docs)
+- [Documentación de React Router](https://reactrouter.com)
 
-## 🤝 Contributing
+## 🤝 Contribuir
 
-Contributions are welcome! Please:
+¡Las contribuciones son bienvenidas! Por favor:
 
-1. Fork the repository
-2. Create a feature branch (`feature/amazing-feature`)
-3. Commit changes with clear messages
-4. Push to your fork
-5. Open a Pull Request
+1. Haz un fork del repositorio
+2. Crea una rama de característica (`feature/caracteristica-increible`)
+3. Haz commit de los cambios con mensajes claros
+4. Envía a tu fork
+5. Abre una Pull Request
 
-## 📄 License
+## 📄 Licencia
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Este proyecto está bajo licencia MIT - ve el archivo LICENSE para más detalles.
 
-## 💬 Support & Contact
+## 💬 Soporte y Contacto
 
-For issues, questions, or suggestions:
-- Open an issue on GitHub
-- Contact the development team
+Para problemas, preguntas o sugerencias:
+
+- Abre un issue en GitHub
+- Contacta al equipo de desarrollo
 
 ---
 
-**Last Updated**: January 2026  
-**Maintained By**: Development Team
+**Última Actualización**: Enero 2026  
+**Mantenido Por**: Equipo de Desarrollo
