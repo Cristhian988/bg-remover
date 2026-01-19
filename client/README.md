@@ -1,73 +1,319 @@
-# React + TypeScript + Vite
+# Cliente Frontend BG-Remove
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación React moderna y receptiva para la eliminación inteligente de fondos con interfaz de usuario profesional construida con tecnologías web de última generación.
 
-Currently, two official plugins are available:
+## 📋 Descripción del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+BG-Remove Frontend es una aplicación web sofisticada que proporciona a los usuarios una interfaz intuitiva para eliminar fondos de imágenes. La aplicación incluye:
 
-## React Compiler
+- **Diseño Receptivo**: Funciona sin problemas en dispositivos de escritorio, tableta y móviles
+- **Interfaz Amigable**: Interfaz intuitiva para eliminar fondos fácilmente
+- **Vista Previa en Tiempo Real**: Retroalimentación visual instantánea con comparativas antes/después
+- **Componentes Profesionales**: Componentes React modulares y reutilizables
+- **Estilos Modernos**: Diseño limpio y moderno usando Tailwind CSS
+- **Seguridad de Tipos**: Soporte completo de TypeScript para código robusto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Stack Tecnológico
 
-## Expanding the ESLint configuration
+| Categoría              | Tecnología     | Versión |
+| ---------------------- | -------------- | ------- |
+| **Framework Frontend** | React          | 19.2.0  |
+| **Herramienta Build**  | Vite           | 7.2.4   |
+| **Lenguaje**           | TypeScript     | ~5.9.3  |
+| **Estilos**            | Tailwind CSS   | 4.1.18  |
+| **Enrutamiento**       | React Router   | 7.12.0  |
+| **Librería Iconos**    | Remix Icon     | 4.8.0   |
+| **Notificaciones**     | React Toastify | 11.0.5  |
+| **Calidad Código**     | ESLint         | 9.39.1  |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Instalación
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Requisitos Previos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Node.js**: Versión 16 o superior
+- **npm** o **yarn**: Gestor de paquetes
+- **Git**: Para control de versiones
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Pasos de Configuración
+
+1. **Clonar el repositorio**:
+
+   ```bash
+   git clone https://github.com/tuusuario/bg-remove.git
+   cd bg-remove
+   ```
+
+2. **Navegar a la carpeta cliente**:
+
+   ```bash
+   cd client
+   ```
+
+3. **Instalar dependencias**:
+
+   ```bash
+   npm install
+   ```
+
+   O con yarn:
+
+   ```bash
+   yarn install
+   ```
+
+4. **Crear configuración de ambiente** (opcional):
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+5. **Iniciar el servidor de desarrollo**:
+   ```bash
+   npm run dev
+   ```
+
+## 🚀 Comandos de Desarrollo
+
+### Servidor de Desarrollo
+
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Inicia el servidor de desarrollo Vite con Hot Module Replacement (HMR).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Acceso**: `http://localhost:5173`
+- **Recarga automática**: Los cambios se reflejan instantáneamente en el navegador
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Compilación de Producción
+
+```bash
+npm run build
 ```
+
+Compila TypeScript y empaqueta la aplicación para producción.
+
+- **Salida**: Carpeta `dist/`
+- **Optimizado**: Minificado y tree-shaken para mejor rendimiento
+
+### Vista Previa de Compilación de Producción
+
+```bash
+npm run preview
+```
+
+Sirve la compilación de producción localmente para pruebas antes del despliegue.
+
+- **Acceso**: Generalmente `http://localhost:4173`
+
+### Linting y Formateo
+
+```bash
+npm run lint
+```
+
+Ejecuta ESLint para identificar y corregir problemas de calidad del código.
+
+- **Auto-corrección**: Corrige automáticamente muchos problemas
+- **Validación**: Asegura que el código siga los estándares del proyecto
+
+## 📁 Estructura de Carpetas
+
+```
+client/
+├── public/                          # Activos estáticos (favicon, etc.)
+│
+├── src/
+│   ├── components/                 # Componentes React reutilizables
+│   │   ├── BgSlider.tsx           # Deslizador interactivo de fondos
+│   │   ├── Footer.tsx             # Pie de página
+│   │   ├── Header.tsx             # Encabezado de página
+│   │   ├── Navbar.tsx             # Barra de navegación
+│   │   ├── Steps.tsx              # Visualización de pasos/proceso
+│   │   ├── Testimonials.tsx       # Sección de testimonios
+│   │   ├── Title.tsx              # Componente de título de página
+│   │   └── Upload.tsx             # Componente de carga de imágenes
+│   │
+│   ├── context/                   # React Context API
+│   │   └── [archivos context]     # Gestión de estado global
+│   │
+│   ├── pages/                     # Componentes de nivel de página
+│   │   ├── Home.tsx               # Página de inicio/bienvenida
+│   │   ├── Result.tsx             # Página de visualización de resultados
+│   │   └── BuyCreadit.tsx         # Página de compra de créditos
+│   │
+│   ├── assets/                    # Imágenes y recursos estáticos
+│   │   └── assets.tsx             # Definiciones de activos
+│   │
+│   ├── App.tsx                    # Componente raíz de la aplicación
+│   ├── main.tsx                   # Punto de entrada de la aplicación
+│   ├── index.css                  # Estilos globales
+│   └── vite-env.d.ts              # Tipos de ambiente de Vite
+│
+├── package.json                    # Dependencias y scripts
+├── tsconfig.json                   # Configuración de TypeScript
+├── tsconfig.app.json              # Configuración TS específica de la app
+├── tsconfig.node.json             # Configuración TS específica de Node
+├── vite.config.ts                 # Configuración de build de Vite
+├── eslint.config.js               # Reglas de ESLint
+├── index.html                     # Punto de entrada HTML
+├── README.md                       # Este archivo
+└── .gitignore                      # Patrones de ignore de Git
+```
+
+### Arquitectura de Componentes
+
+- **BgSlider**: Componente deslizador para efectos de comparación de fondos
+- **Upload**: Maneja cargas de archivos de imagen y validación
+- **Navbar**: Menú de navegación con enrutamiento
+- **Header & Footer**: Componentes de diseño
+- **Steps & Testimonials**: Componentes de visualización de contenido
+- **Home**: Página de inicio principal
+- **Result**: Muestra resultados de imágenes procesadas
+- **BuyCreadit**: Gestión de créditos/suscripciones de usuarios
+
+## 🔧 Configuración
+
+### Configuración de Vite (`vite.config.ts`)
+
+- Integración del plugin React
+- Configuración de optimización de build
+- Configuración del servidor de desarrollo
+
+### Configuración de TypeScript (`tsconfig.json`)
+
+- Verificación de tipos estricta habilitada
+- Target ES2020
+- Soporte JSX para React
+
+### Configuración de ESLint (`eslint.config.js`)
+
+- Reglas de React y React Hooks
+- Soporte de TypeScript
+- Aplicación de estilo de código
+
+## 🌍 Variables de Ambiente
+
+Crea un archivo `.env.local` en el directorio del cliente:
+
+```env
+VITE_API_URL=https://api.example.com
+VITE_APP_NAME=BG-Remove
+```
+
+Acceso en el código:
+
+```typescript
+const apiUrl = import.meta.env.VITE_API_URL;
+```
+
+## 🚀 Despliegue
+
+### Vercel (Recomendado)
+
+1. Envía código a GitHub
+2. Conecta el repositorio a Vercel
+3. Despliegue automático al hacer push a main
+
+### Netlify
+
+1. Conecta el repositorio de GitHub
+2. Configura comando de build: `npm run build`
+3. Configura directorio de publicación: `dist`
+
+### Docker
+
+```dockerfile
+FROM node:18-alpine AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+### Servidor Tradicional
+
+```bash
+npm run build
+# Sube la carpeta dist/ al servidor web
+```
+
+## 📝 Flujo de Trabajo de Desarrollo
+
+1. **Crea una rama de característica**:
+
+   ```bash
+   git checkout -b feature/nombre-de-tu-caracteristica
+   ```
+
+2. **Realiza tus cambios** y prueba localmente
+
+3. **Haz commit con commits convencionales**:
+
+   ```bash
+   git commit -m "feat: agregar descripción de nueva característica"
+   ```
+
+4. **Envía tu rama**:
+
+   ```bash
+   git push origin feature/nombre-de-tu-caracteristica
+   ```
+
+5. **Crea una Pull Request** en GitHub
+
+## ✅ Estándares de Calidad del Código
+
+- **TypeScript**: Modo estricto habilitado para seguridad de tipos
+- **ESLint**: Aplicación de reglas de calidad de código
+- **Estructura de Componentes**: Componentes funcionales con hooks
+- **Convenciones de Nombres**: camelCase para variables/funciones, PascalCase para componentes
+- **Props**: Correctamente tipados usando interfaces de TypeScript
+
+## 🔄 Flujo de Git
+
+- **main**: Código listo para producción
+- **develop**: Rama de integración para características
+- **feature/\***: Ramas de características para nueva funcionalidad
+- **bugfix/\***: Ramas de corrección de errores
+- **docs/\***: Actualizaciones de documentación
+
+## 📚 Recursos
+
+- [Documentación de React](https://react.dev)
+- [Documentación de Vite](https://vitejs.dev)
+- [Manual de TypeScript](https://www.typescriptlang.org/docs/)
+- [Documentación de Tailwind CSS](https://tailwindcss.com/docs)
+- [Documentación de React Router](https://reactrouter.com)
+
+## 🤝 Contribuir
+
+¡Las contribuciones son bienvenidas! Por favor:
+
+1. Haz un fork del repositorio
+2. Crea una rama de característica (`feature/caracteristica-increible`)
+3. Haz commit de los cambios con mensajes claros
+4. Envía a tu fork
+5. Abre una Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo licencia MIT - ve el archivo LICENSE para más detalles.
+
+## 💬 Soporte y Contacto
+
+Para problemas, preguntas o sugerencias:
+
+- Abre un issue en GitHub
+- Contacta al equipo de desarrollo
+
+---
+
+**Última Actualización**: Enero 2026  
+**Mantenido Por**: Equipo de Desarrollo
