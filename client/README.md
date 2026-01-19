@@ -12,6 +12,7 @@ BG-Remove Frontend es una aplicación web sofisticada que proporciona a los usua
 - **Componentes Profesionales**: Componentes React modulares y reutilizables
 - **Estilos Modernos**: Diseño limpio y moderno usando Tailwind CSS
 - **Seguridad de Tipos**: Soporte completo de TypeScript para código robusto
+- **Página de Resultados**: Visualización comparativa de imágenes originales y procesadas
 
 ## 🛠️ Stack Tecnológico
 
@@ -139,7 +140,7 @@ client/
 │   │
 │   ├── pages/                     # Componentes de nivel de página
 │   │   ├── Home.tsx               # Página de inicio/bienvenida
-│   │   ├── Result.tsx             # Página de visualización de resultados
+│   │   ├── Result.tsx             # Página de visualización de resultados procesados
 │   │   └── BuyCreadit.tsx         # Página de compra de créditos
 │   │
 │   ├── assets/                    # Imágenes y recursos estáticos
@@ -206,6 +207,34 @@ Acceso en el código:
 ```typescript
 const apiUrl = import.meta.env.VITE_API_URL;
 ```
+
+## 🎨 Características Implementadas
+
+### Result Page (`src/pages/Result.tsx`)
+La página de resultados proporciona una experiencia visual clara para los usuarios después de procesar una imagen:
+
+**Componentes Principales:**
+- **Comparativa Visual**: Muestra lado a lado la imagen original y el resultado procesado
+- **Interfaz Limpia**: Diseño minimalista con tarjeta blanca redondeada y sombra sutil
+- **Botones Funcionales**:
+  - "Probar con otra imagen": Redirige a la página de inicio para subir una nueva imagen
+  - "Descargar imagen": Permite descargar la imagen sin fondo en formato PNG
+- **Diseño Responsivo**: Adaptado para móviles (una columna) y desktop (dos columnas)
+
+**Características Técnicas:**
+- Uso de React Router para navegación entre páginas
+- Integración con el sistema de assets centralizado
+- Estilos responsivos usando Tailwind CSS con breakpoints sm y lg
+- Accesibilidad mejorada con atributos `alt` descriptivos en imágenes
+- Componente funcional escrito en TypeScript
+- Animaciones de hover con transiciones suaves
+
+**Mejoras de Accesibilidad:**
+- Alt text descriptivo para todas las imágenes
+- Aria-labels en botones interactivos
+- Semántica HTML adecuada con elementos semánticos
+- Navegación clara y funcional
+- Contraste de colores suficiente para WCAG compliance
 
 ## 🚀 Despliegue
 
@@ -316,4 +345,5 @@ Para problemas, preguntas o sugerencias:
 ---
 
 **Última Actualización**: Enero 2026  
+**Versión**: 1.0.0 - Feature: Result Page  
 **Mantenido Por**: Equipo de Desarrollo
