@@ -141,7 +141,7 @@ client/
 │   ├── pages/                     # Componentes de nivel de página
 │   │   ├── Home.tsx               # Página de inicio/bienvenida
 │   │   ├── Result.tsx             # Página de visualización de resultados procesados
-│   │   └── BuyCreadit.tsx         # Página de compra de créditos
+│   │   └── BuyCredit.tsx          # Página de compra de créditos
 │   │
 │   ├── assets/                    # Imágenes y recursos estáticos
 │   │   └── assets.tsx             # Definiciones de activos
@@ -171,7 +171,7 @@ client/
 - **Steps & Testimonials**: Componentes de visualización de contenido
 - **Home**: Página de inicio principal
 - **Result**: Muestra resultados de imágenes procesadas
-- **BuyCreadit**: Gestión de créditos/suscripciones de usuarios
+- **BuyCredit**: Gestión de créditos/suscripciones de usuarios
 
 ## 🔧 Configuración
 
@@ -235,6 +235,33 @@ La página de resultados proporciona una experiencia visual clara para los usuar
 - Semántica HTML adecuada con elementos semánticos
 - Navegación clara y funcional
 - Contraste de colores suficiente para WCAG compliance
+
+### Buy Credit Page (`src/pages/BuyCredit.tsx`)
+La página de compra de créditos permite a los usuarios adquirir paquetes de créditos para procesar más imágenes:
+
+**Componentes Principales:**
+- **Visualización de Planes**: Muestra tarjetas con los diferentes planes disponibles
+- **Información de Precios**: Cada plan muestra el precio y cantidad de créditos incluidos
+- **Botón de Compra**: Cada tarjeta tiene un botón "Purchase" para adquirir el plan
+- **Diseño Responsivo**: Layout flexible que se adapta a diferentes tamaños de pantalla
+
+**Características Técnicas:**
+- Integración con datos de planes desde el sistema de assets
+- Componente de titulo reutilizable
+- Grid flexible con Tailwind CSS para disposición de tarjetas
+- Efectos hover suave con escala y transiciones
+- Componente funcional tipado en TypeScript
+
+**Planes Disponibles:**
+- **Basic**: $10 - 100 créditos (para uso personal)
+- **Advanced**: $50 - 500 créditos (para uso empresarial)
+- **Business**: $250 - 5000 créditos (para uso empresarial)
+
+**Mejoras de Interfaz:**
+- Tarjetas con sombra drop-shadow para profundidad visual
+- Bordes redondeados y espaciado consistente
+- Animaciones hover que mejoran la experiencia del usuario
+- Contraste de colores claros para buena legibilidad
 
 ## 🚀 Despliegue
 
