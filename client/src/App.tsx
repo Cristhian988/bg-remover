@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { BuyCreadit } from "./pages/BuyCreadit";
+import { BuyCredit } from "./pages/BuyCredit";
 import { Result } from "./pages/Result";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/result" element={<Result />} />
-        <Route path="/buy" element={<BuyCreadit />} />
+        <Route path="/buy" element={<BuyCredit />} />
       </Routes>
       <Footer />
     </div>
